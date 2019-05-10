@@ -1,0 +1,1 @@
+json.array! @rent_properties, partial: 'rent_properties/rent_property', as: :rent_property
