@@ -10,23 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190510054024) do
-
-  create_table "nearest_station1s", force: :cascade do |t|
-    t.string   "route_name",      null: false
-    t.string   "station",         null: false
-    t.integer  "walking_minutes", null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  create_table "nearest_station2s", force: :cascade do |t|
-    t.string   "route_name",      null: false
-    t.string   "station",         null: false
-    t.integer  "walking_minutes", null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
+ActiveRecord::Schema.define(version: 20190510061707) do
 
   create_table "rent_properties", force: :cascade do |t|
     t.string   "Property_name", null: false
@@ -36,6 +20,16 @@ ActiveRecord::Schema.define(version: 20190510054024) do
     t.text     "note"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "stations", force: :cascade do |t|
+    t.string   "route_name",      null: false
+    t.string   "station_name",    null: false
+    t.integer  "walking_minutes", null: false
+    t.integer  "property_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["property_id"], name: "index_stations_on_property_id"
   end
 
 end
