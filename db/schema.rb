@@ -13,11 +13,11 @@
 ActiveRecord::Schema.define(version: 20190510061707) do
 
   create_table "rent_properties", force: :cascade do |t|
-    t.string   "Property_name", null: false
+    t.string   "property_name", null: false
     t.integer  "rent",          null: false
     t.text     "address",       null: false
     t.integer  "age",           null: false
-    t.text     "note"
+    t.text     "note",          null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
