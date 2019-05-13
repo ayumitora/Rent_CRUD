@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef658004-d283-418b-9919-2a7e047b39bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/rent_properties/_station_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dev-exam-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dev-exam-master.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/rent_properties_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/rent_properties_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/rent_property.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/rent_property.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/rent_properties/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/rent_properties/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/rent_properties/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/rent_properties/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/rent_properties/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/rent_properties/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/station.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/station.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -24,7 +24,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dev_exam_master@Development__dev_exam_master.rcov" NAME="Development: dev-exam-master Coverage Results" MODIFIED="1557721192732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dev-exam-master" />
+    <SUITE FILE_PATH="coverage/dev_exam_master@Development__dev_exam_master.rcov" NAME="Development: dev-exam-master Coverage Results" MODIFIED="1557734870796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dev-exam-master" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -54,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/rent_property.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+            <state relative-caret-position="90">
+              <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -63,22 +63,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/rent_properties_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="314">
+              <caret line="76" column="90" lean-forward="true" selection-start-line="76" selection-start-column="90" selection-end-line="76" selection-end-column="90" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/rent_properties/_rent_property.json.jbuilder">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/rent_properties/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/models/station.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+            <state>
+              <caret column="27" selection-start-column="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -95,7 +99,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/rent_properties/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="-166">
               <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
             </state>
           </provider>
@@ -132,19 +136,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190510055240_add_nearesr_station_to_property.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190510054001_create_nearest_station1s.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190510054024_create_nearest_station2s.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190510061707_create_stations.rb" />
-        <option value="$PROJECT_DIR$/app/models/station.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190510032314_create_rent_properties.rb" />
         <option value="$PROJECT_DIR$/app/views/rent_properties/_station_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/rent_properties/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/rent_property.rb" />
         <option value="$PROJECT_DIR$/app/views/rent_properties/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/rent_properties/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/station.rb" />
+        <option value="$PROJECT_DIR$/app/models/rent_property.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/controllers/rent_properties_controller.rb" />
       </list>
     </option>
@@ -360,7 +364,7 @@
       <workItem from="1557451826604" duration="11709000" />
       <workItem from="1557537531925" duration="5928000" />
       <workItem from="1557562882945" duration="1479000" />
-      <workItem from="1557710375387" duration="6667000" />
+      <workItem from="1557710375387" duration="10262000" />
     </task>
     <task id="LOCAL-00001" summary="clone,リポジトリ作成">
       <created>1557451939379</created>
@@ -404,11 +408,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557543567502</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add: newアクションとビューにstationモデルのコード追加">
+      <created>1557730337473</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1557730337476</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26281000" />
+    <option name="totallyTimeSpent" value="29876000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,6 +432,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="23" width="715" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28528973" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -476,16 +488,10 @@
     <MESSAGE value="Add:nearest_stationテーブル１、２作成" />
     <MESSAGE value="Modify:最寄駅情報をstationモデル１つに変更" />
     <MESSAGE value="Fix: テーブル内の大文字バグ修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: テーブル内の大文字バグ修正" />
+    <MESSAGE value="Add: newアクションとビューにstationモデルのコード追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add: newアクションとビューにstationモデルのコード追加" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.2/lib/concurrent/map.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2267">
@@ -527,13 +533,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/rent_properties/new.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/station.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20190510061707_create_stations.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -562,32 +561,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/rent_properties/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/application_record.rb">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/rent_property.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/rent_properties/_rent_property.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/rent_properties/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/rent_properties/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
@@ -596,10 +571,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/rent_properties/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/rent_properties/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/rent_properties/_rent_property.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/rent_property.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/station.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/rent_properties_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+        <state relative-caret-position="314">
+          <caret line="76" column="90" lean-forward="true" selection-start-line="76" selection-start-column="90" selection-end-line="76" selection-end-column="90" />
         </state>
       </provider>
     </entry>
