@@ -36,10 +36,26 @@
     <%= f.text_area :note %>
   </div>
 
+  <hr>
+
+  <h3>最寄り駅情報１</h3>
+  <div class="field">
+    <%= f.fields_for :station do |df| %>
+      <%= render partial: "station_form", locals: {df: df } %>
+    <% end %>
+  </div>
+
+  <h3>最寄り駅情報2</h3>
+  <div class="field">
+    <%= f.fields_for :station do |df| %>
+      <%= render partial: "station_form", locals: {df: df } %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
 
-<hr>
+
 

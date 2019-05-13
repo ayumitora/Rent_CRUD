@@ -2,7 +2,7 @@
 
 <p>
   <strong>Property name:</strong>
-  <%= @rent_property.Property_name %>
+  <%= @rent_property.property_name %>
 </p>
 
 <p>
@@ -24,6 +24,8 @@
   <strong>Note:</strong>
   <%= @rent_property.note %>
 </p>
+
+
 
 <%= link_to 'Edit', edit_rent_property_path(@rent_property) %> |
 <%= link_to 'Back', rent_properties_path %>

@@ -16,6 +16,8 @@ class RentPropertiesController < ApplicationController
   def new
     @rent_property = RentProperty.new
     @station = Station.new
+      # @station = @rent_property.stations.build
+    # @rent_property.stations.build
   end
 
   # GET /rent_properties/1/edit
@@ -67,12 +69,12 @@ class RentPropertiesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_rent_property
       @rent_property = RentProperty.find(params[:id])
-      # @rent_property = RentProperty.find(params[:id])
+      # @station1 = RentProperty.find(params[:id]).station
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rent_property_params
-      params.require(:rent_property).permit(:Property_name, :rent, :address, :age, :note)
+      params.require(:rent_property).permit(:property_name, :rent, :address, :age, :note)
       # station.require(:station).permit(:route_name, :station_name, :walking_minutes)
     end
 
