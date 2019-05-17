@@ -15,10 +15,7 @@ class RentPropertiesController < ApplicationController
   # GET /rent_properties/new
   def new
     @rent_property = RentProperty.new
-    # @rent_property.stations.build
-    @station = Station.new
-      # @station = @rent_property.stations.build
-    # @rent_property.stations.build
+    2.times { @rent_property.stations.build }
   end
 
   # GET /rent_properties/1/edit
@@ -29,7 +26,7 @@ class RentPropertiesController < ApplicationController
   # POST /rent_properties.json
   def create
     @rent_property = RentProperty.new(rent_property_params)
-    @station = Station.new(rent_property_params)
+    # @station = @rent_property.stations.build(rent_property_params)
     respond_to do |format|
       if @rent_property.save
         format.html { redirect_to @rent_property, notice: 'Rent property was successfully created.' }
@@ -69,13 +66,15 @@ class RentPropertiesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_rent_property
       @rent_property = RentProperty.find(params[:id])
-      # @station1 = RentProperty.find(params[:id]).station
+      @station = RentProperty.find(params[:id]).stations
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rent_property_params
-      params.require(:rent_property).permit(:property_name, :rent, :address, :age, :note )
-        # (:station).permit(:route_name, :station_name, :walking_minutes)
+      params.require(:rent_property).permit(
+        :property_name, :rent, :address, :age, :note,
+        stations_attributes: [
+          :rent_property_id, :route_name, :station_name, :walking_minutes])
     end
 
 end

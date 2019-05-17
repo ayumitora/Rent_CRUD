@@ -4,7 +4,7 @@ class CreateStations < ActiveRecord::Migration[5.0]
       t.string :route_name, null: false
       t.string :station_name, null: false
       t.integer :walking_minutes, null: false
-      t.references :property, foreign_key: true
+      t.references :rent_property, foreign_key: true
 
       t.timestamps
     end

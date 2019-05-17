@@ -23,13 +23,13 @@ ActiveRecord::Schema.define(version: 20190510061707) do
   end
 
   create_table "stations", force: :cascade do |t|
-    t.string   "route_name",      null: false
-    t.string   "station_name",    null: false
-    t.integer  "walking_minutes", null: false
-    t.integer  "property_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.index ["property_id"], name: "index_stations_on_property_id"
+    t.string   "route_name",       null: false
+    t.string   "station_name",     null: false
+    t.integer  "walking_minutes",  null: false
+    t.integer  "rent_property_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["rent_property_id"], name: "index_stations_on_rent_property_id"
   end
 
 end
