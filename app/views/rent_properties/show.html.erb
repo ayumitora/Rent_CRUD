@@ -25,10 +25,39 @@
   <%= @rent_property.note %>
 </p>
 
-<!--<p>-->
-<!--  <strong>route_name:</strong>-->
-  <%#= @rent_property.stations.route_name %>
-<!--</p>-->
+<br>
+
+<p>
+  <strong>route_name:</strong>
+  <%= @station1.route_name %>
+</p>
+
+<p>
+  <strong>station_name:</strong>
+  <%= @station1.station_name %>
+</p>
+
+<p>
+  <strong>walking_minutes:</strong>
+  <%= "#{@station1.walking_minutes}分" %>
+</p>
+
+<br>
+
+<p>
+  <strong>route_name:</strong>
+  <%= @station2.route_name %>
+</p>
+
+<p>
+  <strong>station_name:</strong>
+  <%= @station2.station_name %>
+</p>
+
+<p>
+  <strong>walking_minutes:</strong>
+  <%= "#{@station2.walking_minutes}分" %>
+</p>
 
 
 <%= link_to 'Edit', edit_rent_property_path(@rent_property) %> |
