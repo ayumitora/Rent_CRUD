@@ -1,6 +1,5 @@
 <h1>Editing Rent Property</h1>
 
-<%#= render 'form', rent_property: @rent_property %>
 <%= form_for(@rent_property) do |f| %>
   <% if @rent_property.errors.any? %>
     <div id="error_explanation">

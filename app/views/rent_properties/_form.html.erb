@@ -38,8 +38,8 @@
 
   <hr>
 
-  <h3>最寄り駅情報１</h3>
-  <div class="field">
+  <% 1.upto(2)  do |time| %>
+    <h3>最寄り駅情報<%= time %></h3>
     <%= f.fields_for :stations do |df| %>
       <%= df.label :route_name %><br>
       <%= df.text_field :route_name %><br><br>
@@ -47,19 +47,8 @@
       <%= df.text_field :station_name %><br><br>
       <%= df.label :walking_minutes %><br>
       <%= df.number_field :walking_minutes %><br><br>
-    <%# end %>
-<!--  </div>-->
-
-  <h3>最寄り駅情報２</h3>
-    <%#= f.fields_for :stations do |df| %>
-      <%= df.label :route_name %><br>
-      <%= df.text_field :route_name %><br><br>
-      <%= df.label :station_name %><br>
-      <%= df.text_field :station_name %><br><br>
-      <%= df.label :walking_minutes %><br>
-      <%= df.number_field :walking_minutes %><br><br>
     <% end %>
-  </div>
+  <% end %>
 
   <div class="actions">
     <%= f.submit %>
