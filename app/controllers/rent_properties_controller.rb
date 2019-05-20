@@ -10,22 +10,16 @@ class RentPropertiesController < ApplicationController
   # GET /rent_properties/1
   # GET /rent_properties/1.json
   def show
-    @station1 = Station.find_by(rent_property_id: @rent_property.id)
-    @station2 = Station.find_by(id: @station1.id + 1 )
-    # もっといい書き方があるような
   end
 
   # GET /rent_properties/new
   def new
     @rent_property = RentProperty.new
-    @rent_property.stations.build
+    2.times {@rent_property.stations.build}
   end
 
   # GET /rent_properties/1/edit
   def edit
-    @station1 = Station.find_by(rent_property_id: @rent_property.id)
-    @station2 = Station.find_by(id: @station1.id + 1 )
-    # もっといい書き方があるような
   end
 
   # POST /rent_properties
@@ -47,8 +41,6 @@ class RentPropertiesController < ApplicationController
   # PATCH/PUT /rent_properties/1
   # PATCH/PUT /rent_properties/1.json
   def update
-    # @station1 = Station.find_by(rent_property_id: @rent_property.id)
-    # @station2 = Station.find_by(id: @station1.id + 1 )
     respond_to do |format|
       if @rent_property.update(rent_property_params)
         format.html { redirect_to @rent_property, notice: 'Rent property was successfully updated.' }
@@ -74,7 +66,6 @@ class RentPropertiesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_rent_property
       @rent_property = RentProperty.find(params[:id])
-      # @station = RentProperty.find(params[:id]).stations
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -82,7 +73,7 @@ class RentPropertiesController < ApplicationController
       params.require(:rent_property).permit(
         :property_name, :rent, :address, :age, :note,
         stations_attributes: [
-          :id, :rent_property_id, :route_name, :station_name, :walking_minutes])
+          :id, :_destroy, :rent_property_id, :route_name, :station_name, :walking_minutes])
+      # fields_forは[引数に与えた名前]_attributesというname属性でフォームを作成する
     end
-
 end

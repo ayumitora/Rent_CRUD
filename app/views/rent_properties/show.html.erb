@@ -29,35 +29,68 @@
 
 <p>
   <strong>route_name:</strong>
-  <%= @station1.route_name %>
+  <%= @rent_property.stations.first.route_name %>
 </p>
 
 <p>
   <strong>station_name:</strong>
-  <%= @station1.station_name %>
+  <%= @rent_property.stations.first.station_name %>
 </p>
 
 <p>
   <strong>walking_minutes:</strong>
-  <%= "#{@station1.walking_minutes}分" %>
+  <%= "#{@rent_property.stations.first.walking_minutes}分" %>
 </p>
 
 <br>
 
 <p>
   <strong>route_name:</strong>
-  <%= @station2.route_name %>
+  <%= @rent_property.stations.second.route_name %>
 </p>
 
 <p>
   <strong>station_name:</strong>
-  <%= @station2.station_name %>
+  <%= @rent_property.stations.second.station_name %>
 </p>
 
 <p>
   <strong>walking_minutes:</strong>
-  <%= "#{@station2.walking_minutes}分" %>
+  <%= "#{@rent_property.stations.second.walking_minutes}分" %>
 </p>
+
+
+<!--<p>-->
+<!--  <strong>route_name:</strong>-->
+  <%#= @station1.route_name %>
+<!--</p>-->
+
+<!--<p>-->
+<!--  <strong>station_name:</strong>-->
+  <%#= @station1.station_name %>
+<!--</p>-->
+
+<!--<p>-->
+<!--  <strong>walking_minutes:</strong>-->
+  <%#= "#{@station1.walking_minutes}分" %>
+<!--</p>-->
+
+<!--<br>-->
+
+<!--<p>-->
+<!--  <strong>route_name:</strong>-->
+  <%#= @station2.route_name %>
+<!--</p>-->
+
+<!--<p>-->
+<!--  <strong>station_name:</strong>-->
+  <%#= @station2.station_name %>
+<!--</p>-->
+
+<!--<p>-->
+<!--  <strong>walking_minutes:</strong>-->
+  <%#= "#{@station2.walking_minutes}分" %>
+<!--</p>-->
 
 
 <%= link_to 'Edit', edit_rent_property_path(@rent_property) %> |
