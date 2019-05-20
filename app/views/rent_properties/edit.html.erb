@@ -1,6 +1,77 @@
 <h1>Editing Rent Property</h1>
 
-<%= render 'form', rent_property: @rent_property %>
+<%#= render 'form', rent_property: @rent_property %>
+<%= form_for(@rent_property) do |f| %>
+  <% if @rent_property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rent_property.errors.count, "error") %> prohibited this rent_property from being saved:</h2>
+
+      <ul>
+        <% rent_property.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :property_name %>
+    <%= f.text_field :property_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rent %>
+    <%= f.number_field :rent %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_area :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :note %>
+    <%= f.text_area :note %>
+  </div>
+
+  <hr>
+
+  <h3>最寄り駅情報１</h3>
+  <div class="field">
+    <%= f.fields_for @station1 do |df| %>
+      <%= df.label :route_name %><br>
+      <%= df.text_field :route_name %><br><br>
+      <%= df.label :station_name %><br>
+      <%= df.text_field :station_name %><br><br>
+      <%= df.label :walking_minutes %><br>
+      <%= df.number_field :walking_minutes %><br><br>
+      <% end %>
+      <!--  </div>-->
+
+      <h3>最寄り駅情報２</h3>
+      <%= f.fields_for @station2 do |df| %>
+      <%= df.label :route_name %><br>
+      <%= df.text_field :route_name %><br><br>
+      <%= df.label :station_name %><br>
+      <%= df.text_field :station_name %><br><br>
+      <%= df.label :walking_minutes %><br>
+      <%= df.number_field :walking_minutes %><br><br>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+
+
 
 <%= link_to 'Show', @rent_property %> |
 <%= link_to 'Back', rent_properties_path %>

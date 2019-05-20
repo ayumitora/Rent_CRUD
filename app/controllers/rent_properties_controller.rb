@@ -23,6 +23,9 @@ class RentPropertiesController < ApplicationController
 
   # GET /rent_properties/1/edit
   def edit
+    @station1 = Station.find_by(rent_property_id: @rent_property.id)
+    @station2 = Station.find_by(id: @station1.id + 1 )
+    # もっといい書き方があるような
   end
 
   # POST /rent_properties
@@ -44,6 +47,8 @@ class RentPropertiesController < ApplicationController
   # PATCH/PUT /rent_properties/1
   # PATCH/PUT /rent_properties/1.json
   def update
+    # @station1 = Station.find_by(rent_property_id: @rent_property.id)
+    # @station2 = Station.find_by(id: @station1.id + 1 )
     respond_to do |format|
       if @rent_property.update(rent_property_params)
         format.html { redirect_to @rent_property, notice: 'Rent property was successfully updated.' }
@@ -77,7 +82,7 @@ class RentPropertiesController < ApplicationController
       params.require(:rent_property).permit(
         :property_name, :rent, :address, :age, :note,
         stations_attributes: [
-          :rent_property_id, :route_name, :station_name, :walking_minutes])
+          :id, :rent_property_id, :route_name, :station_name, :walking_minutes])
     end
 
 end
