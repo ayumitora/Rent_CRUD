@@ -1,97 +1,69 @@
+<h1>閲覧</h1>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Property name:</strong>
+  <strong>物件名 :</strong>
   <%= @rent_property.property_name %>
 </p>
 
 <p>
-  <strong>Rent:</strong>
+  <strong>賃料 :</strong>
   <%= @rent_property.rent %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>住所 :</strong>
   <%= @rent_property.address %>
 </p>
 
 <p>
-  <strong>Age:</strong>
+  <strong>築年数 :</strong>
   <%= @rent_property.age %>
 </p>
 
 <p>
-  <strong>Note:</strong>
+  <strong>備考 :</strong>
   <%= @rent_property.note %>
 </p>
 
 <br>
 
+
+
 <p>
-  <strong>route_name:</strong>
+  <strong>路線名 :</strong>
   <%= @rent_property.stations.first.route_name %>
 </p>
 
 <p>
-  <strong>station_name:</strong>
+  <strong>駅名 :</strong>
   <%= @rent_property.stations.first.station_name %>
 </p>
 
 <p>
-  <strong>walking_minutes:</strong>
+  <strong>徒歩分数 :</strong>
   <%= "#{@rent_property.stations.first.walking_minutes}分" %>
 </p>
 
 <br>
 
 <p>
-  <strong>route_name:</strong>
+  <strong>路線名 :</strong>
   <%= @rent_property.stations.second.route_name %>
 </p>
 
 <p>
-  <strong>station_name:</strong>
+  <strong>駅名 :</strong>
   <%= @rent_property.stations.second.station_name %>
 </p>
 
 <p>
-  <strong>walking_minutes:</strong>
+  <strong>徒歩分数 :</strong>
   <%= "#{@rent_property.stations.second.walking_minutes}分" %>
 </p>
 
 
-<!--<p>-->
-<!--  <strong>route_name:</strong>-->
-  <%#= @station1.route_name %>
-<!--</p>-->
 
-<!--<p>-->
-<!--  <strong>station_name:</strong>-->
-  <%#= @station1.station_name %>
-<!--</p>-->
-
-<!--<p>-->
-<!--  <strong>walking_minutes:</strong>-->
-  <%#= "#{@station1.walking_minutes}分" %>
-<!--</p>-->
-
-<!--<br>-->
-
-<!--<p>-->
-<!--  <strong>route_name:</strong>-->
-  <%#= @station2.route_name %>
-<!--</p>-->
-
-<!--<p>-->
-<!--  <strong>station_name:</strong>-->
-  <%#= @station2.station_name %>
-<!--</p>-->
-
-<!--<p>-->
-<!--  <strong>walking_minutes:</strong>-->
-  <%#= "#{@station2.walking_minutes}分" %>
-<!--</p>-->
-
-
-<%= link_to 'Edit', edit_rent_property_path(@rent_property) %> |
-<%= link_to 'Back', rent_properties_path %>
+<%= link_to '編集', edit_rent_property_path(@rent_property) %> |
+<%= link_to '戻る', rent_properties_path %>

@@ -72,8 +72,8 @@ class RentPropertiesController < ApplicationController
     def rent_property_params
       params.require(:rent_property).permit(
         :property_name, :rent, :address, :age, :note,
-        stations_attributes: [
-          :id, :_destroy, :rent_property_id, :route_name, :station_name, :walking_minutes])
+        stations_attributes: %i(
+          id _destroy rent_property_id route_name station_name walking_minutes))
       # fields_forは[引数に与えた名前]_attributesというname属性でフォームを作成する
     end
 end
